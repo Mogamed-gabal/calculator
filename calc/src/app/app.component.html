@@ -1,0 +1,60 @@
+<div class="body">
+    <div class="container  text-black d-flex justify-content-center ">
+        <div class="calculator position-relative">
+            <div class="box">
+                <div class="result position-absolute  ">
+                
+                    <p>{{result}}</p>
+            
+            </div>
+            <table class=" pt-5 ">
+                
+                <tbody>
+                   
+                    <tr>
+                        <td (click)="addValuesToScreen(num)" class=" px-3 " *ngFor="let num of ['x','%','/'] let index=index"> <p class="bg-primary">
+                            {{num}}
+                        </p></td>
+                        
+                        <td class=" px-3">
+                            <p class="bg-danger " (click)="clearScreen()">
+                                Ac
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td (click)="addValuesToScreen(num)" class=" px-3" *ngFor="let num of [7,8,9,'*']">
+                            <p>
+                                {{num}}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td (click)="addValuesToScreen(num)" class=" px-3" *ngFor="let num of [4,5,6,'-']"> <p>
+                            {{num}}
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td (click)="addValuesToScreen(num)" class=" px-3" *ngFor="let num of [1,2,3,'+']"> <p>
+                                {{num}}
+                            </p></td>
+                    </tr>
+                    <tr>
+                        <td (click)="addValuesToScreen(num)" class=" px-3" *ngFor="let num of [0,'.']"> <p>
+                                {{num}}
+
+                            </p>
+                        </td>
+                        <td>
+                            <p class=" px-5 bg-success "  (click)="getResult()">=</p>
+                            
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            </div>
+            
+        </div>
+</div>  
+</div>
